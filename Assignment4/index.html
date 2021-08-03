@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>COVID-19</title>
+
+</head>
+
+<body>
+
+
+<nav class="scrollmenu">
+  
+<ul>
+  <a class="active" href="#home">Home</a>
+  <a href="#aboutus">About Us</a>
+  <a href="#restaurants">Restaurants</a>
+  <a href="#contact">Contact Us</a>
+</ul>
+<a href="#login" id="login">Login / Signup</a>
+
+</nav>
+
+<div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+  </label>
+  <em>Enable Dark Mode!</em>
+</div>
+<script>
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {        document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+<div class="main_img">
+<div class="img_div">
+  <!-- <img src="https://images.unsplash.com/photo-1623855245544-fa477b4d9e3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="img"> -->
+</div>
+
+</div>
+
+<h2 class="food_items">FOOD ITEMS</h2>
+<div class="main_card">
+<div class="card">
+  <img src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="img" style="width:100%">
+  <h1>Veg. Burger</h1>
+  <p class="price">Rs 70</p>
+  <p>life is too short to miss out on double cheeseburgers.</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+<div class="card">
+  <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" alt="img" style="width:100%">
+  <h1>Pizza</h1>
+  <p class="price">Rs 250</p>
+  <p>perfect pizzas from edge to edge.</p>
+  <button>Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="https://c4.wallpaperflare.com/wallpaper/666/302/422/food-potato-french-fries-hd-wallpaper-preview.jpg" alt="img" style="width:100%">
+  <h1>Peri Peri Fries</h1>
+  <p class="price">Rs 65</p>
+  <p>There's no 'we' in fries.</p>
+  <button>Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="https://thumbs.dreamstime.com/b/hakka-noodles-popular-indo-chinese-recipes-schezwan-vegetables-plate-top-view-151601502.jpg" alt="img" style="width:100%">
+  <h1>Hakka Noodles</h1>
+  <p class="price">Rs 100</p>
+  <p>Cravings can never be stopped without noodles</p>
+  <button>Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="https://i0.wp.com/www.bharatzkitchen.com/wp-content/uploads/2020/08/Spring-Roll.jpg?fit=640%2C363&ssl=1" alt="img" style="width:100%">
+  <h1>Spring Roll</h1>
+  <p class="price">Rs 80</p>
+  <p>There's no 'we' in fries.</p>
+  <button>Add to Cart</button>
+</div>
+
+<div class="card">
+  <img src="http://www.theterracekitchen.in/wp-content/uploads/2019/07/069.-Chocolate-Thick-Shake_545x545.png" alt="img" style="width:100%">
+  <h1>Shake</h1>
+  <p class="price">Rs 120</p>
+  <p>Chocolate shake and friends make the perfect blend.</p>
+  <button>Add to Cart</button>
+</div>
+</div>
+
+
+
+<div class="footer">
+  <p>Contact Us: 98765-43210 &nbsp&nbsp&nbsp || &nbsp&nbsp&nbsp Follow Us On Instagram For More Updates: @fooies_blog .</p>
+</div>
+
+</body>
+</html>
